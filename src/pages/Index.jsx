@@ -1,15 +1,31 @@
-// Complete the Index page component here
-// Use chakra-ui
-import { Button } from "@chakra-ui/react"; // example
-import { FaPlus } from "react-icons/fa"; // example - use react-icons/fa for icons
+import { Button, Checkbox, FormLabel, Heading, Input, VStack, Box } from "@chakra-ui/react";
 
 const Index = () => {
-  // TODO: Create the website here!
   return (
-    <Button>
-      Hello world! <FaPlus />
-    </Button>
-  ); // example
+    <VStack spacing={4} align="stretch">
+      <Heading as="h1">My Todo List</Heading>
+
+      <Box>
+        <FormLabel>New todo</FormLabel>
+        <Input placeholder="Enter a new todo" />
+        <Button colorScheme="blue" ml={2}>
+          Add
+        </Button>
+      </Box>
+
+      <VStack align="start" mt={4}>
+        <Box>
+          <Checkbox>Todo 1</Checkbox>
+        </Box>
+        <Box>
+          <Checkbox>Todo 2</Checkbox>
+        </Box>
+        <Box>
+          <Checkbox>Todo 3</Checkbox>
+        </Box>
+      </VStack>
+    </VStack>
+  );
 };
 
 export default Index;
